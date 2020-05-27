@@ -1,0 +1,19 @@
+#!/bin/bash
+#Nos pregunta la edad y que nos conteste:
+# Si menor que 10 "Eres muy joven"
+# Entre 10 y 30 "que mala edad tienes"
+# Mayor de 30 "que bien te veo"
+
+read -p "¿Cual es su edad?" EDAD
+
+if [ $EDAD -lt  10 ]
+then 
+	echo "Eres muy joven"
+elif [ $EDAD -ge 10 -a $EDAD -le 30 ]
+then 
+	echo "que mala edad tienes"
+elif [ $EDAD -gt 30 ]
+then 
+	echo "Que bien te veo"
+fi
+

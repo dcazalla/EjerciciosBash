@@ -1,0 +1,9 @@
+#!/bin/bash
+
+read -p "Introduzca una palabra: " PALABRA
+echo La palabra es: $PALABRA
+for i in $PALABRA
+do
+echo $i
+echo hh
+done 

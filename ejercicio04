@@ -1,0 +1,20 @@
+#!/bin/bash
+#Introducida una letra por teclado liste todos los meses que empiezan por esa
+#letra o mensaje de error si no coincide la letra con ningún mes.
+
+clear
+read -p "Introduzca la primera letra del mes: " MES
+case $MES in
+	a) echo "Abril, Agosto";;
+	e) echo "Enero";;
+	m) echo "Marzo, Mayo";;
+	f) echo "Febrero";;
+	j) echo "Junio, Julio";;
+	s) echo "Septiembre";;
+	o) echo "Octubre";;
+	n) echo "Noviembre";;
+	d) echo "Diciembre";;
+	*) echo "No existe un mes que empiece por " $MES
+esac
+
+

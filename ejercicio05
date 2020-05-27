@@ -1,0 +1,17 @@
+#!/bin/bash
+clear
+read -p "Introduzca dos numeros: " NUM1 NUM2
+
+echo "num1: " $NUM1
+echo "num2: " $NUM2
+
+SUM=$(($NUM1 + $NUM2))
+RES=$(($NUM1 - $NUM2))
+MUL=$(($NUM1 * $NUM2))
+DIV=$(($NUM1 / $NUM2))
+MOD=$(($NUM1 % $NUM2))
+echo "El resultado de la suma es: " $SUM 
+echo resta $RES
+echo multiplicacion $MUL
+echo division $DIV
+echo resto $MOD

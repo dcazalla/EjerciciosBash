@@ -1,0 +1,11 @@
+#!/bin/bash
+#Nos pregunta "¿Quién descubrió América?", comprobar respuesta correcta y falsa.
+
+read -p "¿Quién descubrió América      ?" RESPUESTA
+
+if [ "$RESPUESTA" == "Colon" ] || [ "$RESPUESTA" == "COLON" ]
+then
+	echo Respuesta correcta
+else
+	echo Respuesta incorrecta
+fi

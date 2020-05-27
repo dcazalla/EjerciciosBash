@@ -1,0 +1,19 @@
+#!/bin/bash 
+clear
+read -p "Escriba 3 palabras separadas por blancos: " PALABRA1 PALABRA2 PALABRA3
+echo $PALABRA1 $PALABRA2 $PALABRA3
+if [ [ "$PALABRA1" = "$PALABRA2" ] -a [ "$PALABRA2" = "$PALABRA3" ] ]
+then
+echo Las tres palabras son iguales.
+elif [ "$PALABRA1" = "$PALABRA2" ]
+then
+echo Las palabras $PALABRA1 y $PALABRA2 son iguales \(1 y 2\).
+elif [ "$PALABRA2" = "$PALABRA3" ]
+then
+echo Las palabras $PALABRA2 y $PALABRA3 son iguales \(2 y 3\).
+elif [ "$PALABRA1" = "$PALABRA3" ]
+then 
+echo Las palabras $PALABRA1 y $PALABRA3 son iguales \(1 y 3\).
+else
+echo Todas las palabras son distintas.
+fi

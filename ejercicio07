@@ -1,0 +1,14 @@
+#!/bin/bash
+#Con "case" queremos saber, una vez introducido un tipo de carnet de conducir
+#a que tipos de coches se corresponde.
+
+clear
+TIPOCARNET=$1;
+case $TIPOCARNET in
+E) echo "La letra E: Remolques";;
+D) echo "La letra D: Autobuses";;
+C[1-5]) echo "Los tipos C1-C5: Camiones";;
+B[1,2]) echo "Los tipos B1, B2: Automóviles";;
+A) echo "El tipo A: Motocicletas";;
+*) echo "Categoría no contemplada";;
+esac
