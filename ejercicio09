@@ -1,9 +1,16 @@
 #!/bin/bash
 
+# Realiza un script que escriba al revés una palabra.
+
 read -p "Introduzca una palabra: " PALABRA
 echo La palabra es: $PALABRA
-for i in $PALABRA
+NUMERO=${#PALABRA}
+
+echo El número de letras es: $NUMERO
+
+FIN=$NUMERO
+
+for i in $(seq 1 $FIN)
 do
-echo $i
-echo hh
+	echo ${PALABRA:$(($FIN-$i)):1}
 done 
