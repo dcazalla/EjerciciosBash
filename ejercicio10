@@ -1,0 +1,23 @@
+#!/bin/bash
+
+#Crear una calculadora con funciones. Crea el siguiente menú para ello:
+#CALCULADORA
+# 1. SUMA.
+# 2. RESTA.
+# 3. DIVISIÓN.
+# 4. MULTIPLICACIÓN.
+# 5. SALIR.
+
+suma()
+{
+	read -p "Primer número: " NUM1
+	read -p "Segundo número: " NUM2
+	RESULTADO=$(($NUM1 + $NUM2))
+	echo "El resultado es: " $RESULTADO
+
+
+}
+
+suma
+
+
