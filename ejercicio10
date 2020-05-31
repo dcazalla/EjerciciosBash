@@ -14,10 +14,54 @@ suma()
 	read -p "Segundo número: " NUM2
 	RESULTADO=$(($NUM1 + $NUM2))
 	echo "El resultado es: " $RESULTADO
-
-
 }
 
-suma
+resta(){
+        read -p "Primer número: " NUM1
+        read -p "Segundo número: " NUM2
+        RESULTADO=$(($NUM1  $NUM2))
+        echo "El resultado es: " $RESULTADO
+}
+
+multiplicar(){
+        read -p "Primer número: " NUM1
+        read -p "Segundo número: " NUM2
+        RESULTADO=$(($NUM1 * $NUM2))
+        echo "El resultado es: " $RESULTADO
+}
+
+dividir(){
+        read -p "Primer número: " NUM1
+        read -p "Segundo número: " NUM2
+        RESULTADO=$(($NUM1 / $NUM2))
+        echo "El resultado es: " $RESULTADO
+}
+
+mostrarmenu(){
+	echo "CALCULADORA:"
+	echo "1. SUMA"
+        echo "2. RESTA"
+        echo "3. DIVISIÓN"
+        echo "4. MULTIPLICACIÓN"
+	echo "5. SALIR"
+}
+
+while true 
+do
+	mostrarmenu
+	read -p "Elija una opción: " OPCION 
+	if [ $OPCION -lt 0 ] || [ $OPCION -gt 5 ] 
+	then	echo "Opción incorrecta"
+	else 
+
+		case $OPCION in
+			1) suma;;
+			2) resta;;
+			3) dividir;;
+			4) multiplicar;;
+			5) exit;;
+		esac
+	fi
+done
 
 
