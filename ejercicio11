@@ -1,0 +1,26 @@
+#!/bin/bash
+# Crear un script que nos permita realizar una AGENDA con 
+# las siguientes opciones:
+# 1. Añadir.
+# 2. Listar.
+# 3. Borrar contenido.
+# 4. Eliminar Registro.
+# 5. Salir.
+
+echo "---------------------------------"
+echo "Agenda electrónica"
+echo "1. Añadir"
+echo "2. Listar"
+echo "3. Borrar el contenido"
+echo "4. Eliminar registro"
+echo "5. Salir"
+echo "---------------------------------"
+read -p "Introduce una opción: " OPCION
+case $OPCION in
+1) echo "opcion 1";;
+2) echo "opcion 2";;
+3) echo "opcion 3";;
+4) echo "opcion 4";;
+5) exit;;
+*) echo "opcion incorrecta";;
+esac
