@@ -7,6 +7,8 @@
 # 4. Eliminar Registro.
 # 5. Salir.
 
+function menu ()
+{
 echo "---------------------------------"
 echo "Agenda electrónica"
 echo "1. Añadir"
@@ -15,6 +17,9 @@ echo "3. Borrar el contenido"
 echo "4. Eliminar registro"
 echo "5. Salir"
 echo "---------------------------------"
+}
+
+menu
 read -p "Introduce una opción: " OPCION
 case $OPCION in
 1) echo "opcion 1";;
