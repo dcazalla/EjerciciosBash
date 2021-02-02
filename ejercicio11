@@ -19,13 +19,29 @@ echo "5. Salir"
 echo "---------------------------------"
 }
 
+function anyadir ()
+{
+	read -p "Introduzca nombre y apellidos separados por espacios: " NOMBRE APELLIDO1 APELLIDO2
+	LINEA=$NOMBRE:$APELLIDO1:$APELLIDO2
+	echo $LINEA >> agenda.txt
+}
+
+function listar ()
+{
+	
+
+}
+
+while [ true ]
+do
 menu
 read -p "Introduce una opción: " OPCION
 case $OPCION in
-1) echo "opcion 1";;
+1) anyadir;;
 2) echo "opcion 2";;
 3) echo "opcion 3";;
 4) echo "opcion 4";;
 5) exit;;
 *) echo "opcion incorrecta";;
 esac
+done
