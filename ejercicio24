@@ -1,0 +1,6 @@
+#!/bin/bash
+
+###############################################################################################
+# Realizar un script que muestre los UID que tienen un conjunto de usuarios que se le dan
+# de entrada como parámetros.
+###############################################################################################

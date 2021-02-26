@@ -1,0 +1,4 @@
+################################################################################################
+# Hacer un shell-script que acepte como argumentos nombres de ficheros y muestre el
+# contenido de cada uno de ellos precedido de una cabecera con el nombre del fichero.
+################################################################################################

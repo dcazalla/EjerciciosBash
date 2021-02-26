@@ -1,0 +1,19 @@
+#!/bin/bash
+
+################################################################################################
+# Programe un script llamado 'estadisticas_dir' que realice un estudio de todo el árbol de 
+# directorios y ficheros partiendo del directorio pasado como parámetro de forma que obtengamos
+# la siguiente información:
+# Número de ficheros en los cuales:
+# - Número disponemos de permiso de lectura.
+# - Número disponemos de permiso de escritura.
+# - Número disponemos de permiso de ejecución.
+# - Número carecemos de permiso de lectura.
+# - Número carecemos de permiso de escritura.
+# - Número carecemos de permiso de ejecución.
+# - Número de ficheros regulares encontrados.
+# - Número de dispositivos de bloques encontrados.
+# - Número de dispositivos de caracteres encontrados.
+# - Número de fifos encontrados.
+#
+################################################################################################

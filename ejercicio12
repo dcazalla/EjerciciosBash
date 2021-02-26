@@ -1,0 +1,10 @@
+#!bin/bash
+
+#-----------------------------------------------------------------------------
+#Realiza el siguiente MENÚ DIRECTORIOS y realiza las órdenes para que funcione
+# MENÚ
+# 1. Crear Directorio.
+# 2. Borrar Directorio.
+# 3. Copiar archivo a directorio.
+# 4. Salir.
+#-----------------------------------------------------------------------------

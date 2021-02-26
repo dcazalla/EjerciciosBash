@@ -1,0 +1,6 @@
+#!/bin/bash
+
+############################################################################################
+# Línea de mandatos que imprima en orden alfabético aquellas líneas que, estando entre las
+# 10 primeras del archivo carta, contengan la cadena de caracteres Juan.
+############################################################################################
