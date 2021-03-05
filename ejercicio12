@@ -1,4 +1,4 @@
-#!bin/bash
+#!/bin/bash
 
 #-----------------------------------------------------------------------------
 #Realiza el siguiente MENÚ DIRECTORIOS y realiza las órdenes para que funcione
@@ -8,3 +8,33 @@
 # 3. Copiar archivo a directorio.
 # 4. Salir.
 #-----------------------------------------------------------------------------
+
+menu(){
+echo '1. Crear Directorio.'
+echo '2. Borrar Directorio.'
+echo '3. Copiar archivo a directorio.'
+echo '4. Salir.'
+
+}
+
+principal(){
+nombredir=''
+valor=0
+while [ $valor -ne 4 ]
+do
+menu;
+echo Elija una opción:
+read valor
+case $valor in
+	1) echo 'Escriba el nombre del directorio a crear: '; read nombredir; mkdir $nombredir;;
+	2) echo 'Escriba el nombre del directorio a borrar: '; read nombredir; rmdir $nombredir;;
+	3) read -p 'Escriba el nombre del archivo: ' nombrearch; read -p 'Escriba el nombre del directorio: ' nombredir;
+		cp $nombrearch $nombredir;;
+	4) exit;;
+
+esac
+done
+
+}
+
+principal;
