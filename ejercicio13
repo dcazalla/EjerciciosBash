@@ -1,7 +1,7 @@
 #!/bin/bash
 
 ################################################################################################
-# Programe un script llamado 'estadisticas_dir' que realice un estudio de todo el árbol de 
+# Programe un script llamado 'estadisticas_dir' que realice un estudio de todo el árbol de
 # directorios y ficheros partiendo del directorio pasado como parámetro de forma que obtengamos
 # la siguiente información:
 # Número de ficheros en los cuales:
@@ -17,3 +17,95 @@
 # - Número de fifos encontrados.
 #
 ################################################################################################
+BARRA="/"
+
+buscarDirectorios(){
+	for elemento in $(ls $DIRECTORIO)  
+	do
+		if [ -d $DIRECTORIO$BARRA$elemento ] ;
+		then
+			echo $DIRECTORIO$BARRA$elemento " Es un directorio";
+		fi
+
+		if [ -f $DIRECTORIO$BARRA$elemento ] ;
+		then
+			echo $DIRECTORIO$BARRA$elemento " Es un archivo"
+		fi
+
+	done
+
+}
+
+
+menu(){
+	read -p "Escriba el nombre del directorio que quiere escanear: " DIRECTORIO
+
+	if [ -d $DIRECTORIO ] ;
+	then
+		echo "El directorio SI existe";
+		buscarDirectorios;
+	else
+		echo "El directorio NO existe"
+	fi
+}
+
+
+
+numeroDisponemosPermisoLectura(){
+echo "Número disponemos de permiso de lectura: "
+ls -l $DIRECTORIO | egrep '^.{1}r'| wc -l
+}
+
+numeroDisponemosPermisoEscritura(){
+echo "Número disponemos de permiso de escritura: "
+ls -l $DIRECTORIO | egrep '^.{2}w' | wc -l
+}
+
+numeroDisponemosPermisoEjecucion(){
+echo "Número disponemos de permiso de ejecución: "
+ls -l $DIRECTORIO | egrep '^.{3}x' | wc -l
+}
+
+
+numeroCarecemosPermisoLectura(){
+echo "Número carecemos de permiso de lectura: "
+ls -l $DIRECTORIO | egrep '^.{1}-'| wc -l
+}
+
+numeroCarecemosPermisoEscritura(){
+echo "Número carecemos de permiso de escritura: "
+ls -l $DIRECTORIO | egrep '^.{2}-' | wc -l
+}
+
+numeroCarecemosPermisoEjecucion(){
+echo "Número carecemos de permiso de ejecución: "
+ls -l $DIRECTORIO | egrep '^.{3}-' | wc -l
+}
+
+numeroDispositivosBloques(){
+echo "Número de dispositivos de bloques: "
+ls -l $DIRECTORIO | grep ^b | wc -l
+}
+
+numeroDispositivosCaracteres(){
+echo "Número de dispositivos de caracteres: "
+ls -l $DIRECTORIO | grep ^c | wc -l
+}
+
+numeroArchivosFIFO(){
+echo "Número de archivos FIFO: "
+ls -l | grep ^p | wc -l
+}
+
+
+menu;
+numeroDisponemosPermisoLectura;
+numeroDisponemosPermisoEscritura;
+numeroDisponemosPermisoEjecucion;
+numeroCarecemosPermisoLectura;
+numeroCarecemosPermisoEscritura;
+numeroCarecemosPermisoEjecucion;
+numeroDispositivosBloques;
+numeroDispositivosCaracteres;
+numeroArchivosFIFO;
+
