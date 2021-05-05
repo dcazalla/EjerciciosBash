@@ -1,0 +1,39 @@
+#!/bin/bash
+
+#############################################################################################
+# Realizar un shell-script que reciba como argumentos números comprendidos entre 1 y 75.
+# Dará error en caso de que algún argumento no esté dentro del rango y terminará sin hacer
+# nada. En caso contrario generará una línea por cada argumeto con tantos asteriscos como
+# indique su argumento.
+# Cómo crear un array: https://www.golinuxcloud.com/bash-split-string-into-array-linux/
+# Cómo recorrer un array: https://atareao.es/tutorial/scripts-en-bash/arrays-en-bash/
+#############################################################################################
+
+read -p "Escriba números comprendidos entre el 1 y el 75: " NUMEROS_ENTRADA
+
+echo "Ha escrito los números: " $NUMEROS_ENTRADA
+
+miarray=($NUMEROS_ENTRADA)
+
+echo "El array es: " ${miarray[@]}
+
+for i in ${miarray[@]}
+do
+	if [ "$i" -gt "75" ]; then
+		echo El número  $i es mayor que 75
+		exit
+	fi
+done
+
+for i in ${miarray[@]}
+do
+	echo -n $i 
+	aux=0
+	while [ $aux -lt $i ]
+	do
+		echo -n "*"
+		let aux=aux+1
+	done
+	echo ''
+done
+
