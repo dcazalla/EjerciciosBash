@@ -1,4 +1,18 @@
+#!/bin/bash
+
 ################################################################################################
 # Hacer un shell-script que acepte como argumentos nombres de ficheros y muestre el
 # contenido de cada uno de ellos precedido de una cabecera con el nombre del fichero.
 ################################################################################################
+
+
+read -p "Escriba el nombre de los ficheros: " FICHEROS
+
+ARRAYFICHEROS=($FICHEROS)
+
+for i in ${ARRAYFICHEROS[@]}
+do
+	echo "************** Nombre archivo: " $i
+	echo "************** Contenido del archivo: "
+	cat $i
+done
