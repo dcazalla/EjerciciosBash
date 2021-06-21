@@ -1,0 +1,14 @@
+#!/bin/bash
+
+read VALOR1
+read VALOR2
+
+SUMA=$(($VALOR1+$VALOR2))
+RESTA=$(($VALOR1-$VALOR2))
+PRODUCTO=$(($VALOR1*$VALOR2))
+COCIENTE=$(($VALOR1/$VALOR2))
+
+echo $SUMA
+echo $RESTA
+echo $PRODUCTO
+echo $COCIENTE
