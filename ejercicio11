@@ -29,7 +29,6 @@ function anyadir ()
 function listar ()
 {
 	
-
 }
 
 while [ true ]
@@ -38,7 +37,7 @@ menu
 read -p "Introduce una opción: " OPCION
 case $OPCION in
 1) anyadir;;
-2) echo "opcion 2";;
+2) listar;;
 3) echo "opcion 3";;
 4) echo "opcion 4";;
 5) exit;;
