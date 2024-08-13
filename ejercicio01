@@ -4,3 +4,4 @@ echo "Escriba el nombre del usuario"
 read NOMBRE
 echo "Los procesos abiertos por el usuario $NOMBRE son:"
 ps -u $NOMBRE
+echo "Bye!!!"
